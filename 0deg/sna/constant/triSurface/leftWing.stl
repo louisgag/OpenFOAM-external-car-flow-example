@@ -1,0 +1,72 @@
+solid Created by Gmsh
+facet normal 1 -0 0
+  outer loop
+    vertex -0.24 0.125 0.57
+    vertex -0.24 0.25 0.57
+    vertex -0.24 0.25 0.715
+  endloop
+endfacet
+facet normal 1 0 0
+  outer loop
+    vertex -0.24 0.125 0.57
+    vertex -0.24 0 0.57
+    vertex -0.24 0 0.425
+  endloop
+endfacet
+facet normal 1 0 0
+  outer loop
+    vertex -0.24 0 0.28
+    vertex -0.24 0.25 0.28
+    vertex -0.24 0.25 0.425
+  endloop
+endfacet
+facet normal 1 0 0
+  outer loop
+    vertex -0.24 0.25 0.86
+    vertex -0.24 0 0.86
+    vertex -0.24 0 0.715
+  endloop
+endfacet
+facet normal 1 0 -0
+  outer loop
+    vertex -0.24 0.25 0.425
+    vertex -0.24 0.25 0.57
+    vertex -0.24 0.125 0.57
+  endloop
+endfacet
+facet normal 1 0 0
+  outer loop
+    vertex -0.24 0 0.425
+    vertex -0.24 0 0.28
+    vertex -0.24 0.25 0.425
+  endloop
+endfacet
+facet normal 1 -0 0
+  outer loop
+    vertex -0.24 0 0.425
+    vertex -0.24 0.25 0.425
+    vertex -0.24 0.125 0.57
+  endloop
+endfacet
+facet normal 1 0 0
+  outer loop
+    vertex -0.24 0 0.715
+    vertex -0.24 0 0.57
+    vertex -0.24 0.125 0.57
+  endloop
+endfacet
+facet normal 1 0 -0
+  outer loop
+    vertex -0.24 0.25 0.715
+    vertex -0.24 0.25 0.86
+    vertex -0.24 0 0.715
+  endloop
+endfacet
+facet normal 1 0 0
+  outer loop
+    vertex -0.24 0.25 0.715
+    vertex -0.24 0 0.715
+    vertex -0.24 0.125 0.57
+  endloop
+endfacet
+endsolid Created by Gmsh

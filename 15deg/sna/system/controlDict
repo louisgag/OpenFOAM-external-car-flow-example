@@ -1,0 +1,108 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.5                                   |
+|   \\  /    A nd           | Web:      http://www.OpenFOAM.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application simpleFoam;
+
+startFrom       latestTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         4000;
+
+deltaT          1;
+
+writeControl    adjustableRunTime;
+
+writeInterval   2000;
+
+cycleWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  12;
+
+writeCompression uncompressed;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable yes;
+
+adjustTimeStep yes;
+
+maxCo          0.5;
+
+maxDeltaT      1.0;
+
+
+
+
+
+functions
+( 
+forces
+{
+type forces;
+functionObjectLibs ("libforces.so"); //Lib to load -> dylib on Mac and so on Linux
+patches ("fixedWalls.*"); //Name of patche to integrate forces
+rhoInf 1.2; //Reference density for fluid - can be changed later ...
+CofR (0 0 0); //Origin for moment calculations (CenterofRotation)
+outputControl timeStep; //outputTime
+outputInterval 100;
+pName p; // name of the field
+UName U; // name of the field
+rhoName rhoInf;
+} 
+
+
+forceCoeffs
+{
+type forceCoeffs;
+functionObjectLibs ("libforces.so");
+patches ("fixedWalls.*");
+rhoInf 1.2;
+CofR (0 0 0);
+liftDir (0 1 0);
+dragDir (0 0 1);
+pitchAxis (0 0 0);
+magUInf 9;
+lRef 1.044; //non
+Aref 0.280000; //approx
+outputControl timeStep;
+outputInterval 100;
+pName p; // name of the field
+UName U; // name of the field
+rhoName rhoInf;
+} 
+
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+// ************************************************************************* //
